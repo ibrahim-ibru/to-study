@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(to bottom left,rgb(169, 5, 234),rgb(20, 149, 223),rgb(19, 19, 19));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: aqua; */
+        }
+
+        .main-body{
+            height: 60vh;
+            width: 60%;
+            background-color: rgba(230, 241, 251,.3);
+            border-radius: 30px;
+            
+        }
+        
+        .sub-body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 25px 50px;
+            color: white;
+        }
+
+        .main-body div .block-1,.block-2,.block-3{
+            background-color: black;
+            margin: 20px 0;
+            height: 30vh;
+            border-radius: 20px;
+            text-align: center;
+            width: 26%;
+        }
+
+        .main-body div div h1{
+            font-size: 70px;
+        }
+
+        .main-body div div h2{
+            font-size: 30px;
+        }
+        .block-4,.block-5{
+            height: 90px;
+            border-radius: 20px;
+            text-align: center;
+            width: 250px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-body">
+        <div class="sub-body">
+
+            <div class="block-1"><h1 id="hour"></h1><p>Hours</p></div>
+            <div class="block-2"><h1 id="min"></h1><p>Minutes</p></div>
+            <div class="block-3"><h1 id="sec"></h1><p>Seconds</p></div>
+            <div class="block-4"><h2 id="date">20/20/2002</h2></div>
+            <div class="block-6">
+                <h2 id="am-pm" style="color: black; font-size: 30px; border: 1px solid black; border-radius: 10px; padding: 10px 20px;">am</h2>
+            </div>
+            <div class="block-5"><h2 id="day">monday</h2></div>
+        </div>
+    </div>
+    <script>
+
+        function asd(){
+            const date=new Date()
+            setTimeout(()=>{
+               
+                const day=date.getDay()
+                switch(day){
+                    case 0: document.querySelector("#day").textContent="Sunday"
+                    break
+                    case 1: document.querySelector("#day").textContent="Monday"
+                    break
+                    case 2: document.querySelector("#day").textContent="Tuesday"
+                    break
+                    case 3: document.querySelector("#day").textContent="Wednesday"
+                    break
+                    case 4: document.querySelector("#day").textContent="Thursday"
+                    break
+                    case 5: document.querySelector("#day").textContent="Friday"
+                    break
+                    case 6: document.querySelector("#day").textContent="Saturday"
+                    break
+                    
+                }
+
+                asd()
+
+
+            })
+
+            document.querySelector("#hour").textContent=date.getHours()
+                document.querySelector("#min").textContent=date.getMinutes()
+                document.querySelector("#date").textContent=`${date.getDate()}/${date.getMonth()+1}/${date.getUTCFullYear()}`
+                document.querySelector("#sec").textContent=date.getSeconds()
+                if(date.getHours()>=12){
+                document.querySelector("#am-pm").textContent="pm"
+                    
+                }
+
+        }
+
+        asd()
+    </script>
+</body>
+</html>

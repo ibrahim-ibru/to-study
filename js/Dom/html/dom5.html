@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="add()">add</button> -->
+<h1 class="" id="eg"></h1>
+
+
+    <script>
+
+        
+// console.log(Math.sqrt(100));
+// console.log(Math.PI);
+// console.log(Math.pow(3,3));
+// console.log(Math.round(10.6));
+// console.log(Math.floor(10.6));
+// console.log(Math.abs(-100));
+// console.log(Math.ceil(10.1));
+// console.log(Math.max(10,20,30,90,40));
+// console.log(Math.min(10,20,5,30,90,40));
+
+
+
+
+
+        // console.log("start");
+        // setTimeout(()=>{
+        //     for(i=0;i<10;i++){
+        //         console.log(i);
+                
+        //     }
+        // },3000)
+        // console.log("stop");
+        
+    //     i=0
+    //    x= setInterval(()=>{
+    //         if(i==10){
+    //             clearInterval(x)
+    //         }
+    //         document.write("*")
+    //         i++
+    //     },2000)
+
+    i=10
+    x=setInterval(()=>{
+        if(i==0){
+            document.getElementById("eg").textContent="Start"
+            clearInterval(x)
+        }else{
+            document.getElementById("eg").textContent=i
+            i--
+        }
+    },1000)
+
+
+    </script>
+</body>
+</html>

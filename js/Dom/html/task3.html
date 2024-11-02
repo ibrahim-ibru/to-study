@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+        body{
+            /* background-image:linear-gradient(to bottom right,rgb(128, 188, 248),rgb(102, 201, 254)) ; */
+            height: 100vh;
+            background-color: aliceblue;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Agdasima", sans-serif;
+        }
+        .calc-body{
+            height: 500px;
+            width: 350px;
+            background-color: rgba(33, 67, 201, 0.758);
+            border-radius: 20px;
+            box-shadow: 3px 5px 20px 1px grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        input{
+            background-color: rgba(245, 247, 249, 0.5);
+            border: 0;
+            border-radius: 5px;
+            height: 40px;
+            width: 100px;
+            margin:0 20px;
+        }
+        button{
+            border: 0;
+            margin: 13px;
+            padding: 7px 14px;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: rgba(245, 250, 254,.8);
+            border-radius: 10px;
+        }
+        .divres{
+
+            justify-content: center;
+            align-items: center;
+        }
+        .res{
+            background-color: rgba(240, 242, 245,.5);
+            /* height: 50px; */
+            width: 80px;
+            padding: 20px;
+            margin: 0px 30px;
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-body">
+        <div class="calc">
+            <input type="text" id="num1">
+            <button id="mul" >Generate</button>
+            <button id="clr" style="margin-left: 200px;" >clear</button>
+            <!-- <input type="text" id="num2"> -->
+            <!-- <button id="add">+</button>
+            <button id="sub">-</button>
+            <button id="mul">x</button>
+            <button id="di">/</button>
+            <button id="clr">clear</button> -->
+            <div class="divres">
+                <h2 id="result" class="res"></h2>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/dom-task3.js">
+        document.getElementById("mul").addEventListener("click",(event)=>{
+    x=parseInt(document.getElementById("num1").value)
+    str=``
+    for(i=1;i<=10;i++){
+        str+=` ${i} x ${x} = ${i*x} \n`
+    }
+    document.getElementById("result").textContent=`${str}`
+    
+    
+})
+document.getElementById("clr").addEventListener("click",(event)=>{
+    document.getElementById("num1").value=" "
+    // document.getElementById("num2").textContent=" "
+    document.getElementById("result").textContent=" "
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="enter the name">
+    <input type="text" id="num" placeholder="enter the phone number">
+    <button onclick="add()">add</button>
+    <ul id="task">
+    </ul>
+
+
+
+
+
+
+    <script>
+        const todos=[]
+
+        function add(){
+            let name=document.getElementById("name").value
+            let phone=document.getElementById("num").value
+            todos.push({name,phone})
+            document.getElementById("name").value=""
+            document.getElementById("num").value=""
+            document.getElementById("name").addEventListener("change",(event)=>{
+                document.getElementById("num").focus()
+
+            })
+            getTask()
+        }
+        
+
+        function getTask(){
+            let str=``
+            for(i=0;i<todos.length;i++){
+                str+=` <li><input type="text" class="inp1" value="${todos[i].name}"><input type="text" class="inp2" value=" ${todos[i].phone}"><button onclick="saveTask(${i})">save</button><button onclick="deleteTask(${i})">delete</button>\n<button onclick="editTask(${i})">Edit</button></li> `
+            }
+            document.getElementById("task").innerHTML=str
+        }
+
+        function deleteTask(index){
+            todos.splice(index,1)
+            getTask()
+        }
+
+        function editTask(index){
+            document.getElementsByClassName("inp1")[index].focus()
+            document.getElementsByClassName("inp1")[index].addEventListener("change",(event)=>{
+            document.getElementsByClassName("inp2")[index].focus()
+
+            })
+        }
+        function saveTask(index){
+            let name=document.getElementsByClassName("inp1")[index].value
+            let phone=document.getElementsByClassName("inp2")[index].value
+            todos[index]={name,phone}
+            getTask()
+        }
+        getTask()
+    </script>
+</body>
+</html>
