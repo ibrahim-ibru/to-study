@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            height: 100vh;
+            margin: 0;
+        }
+        .circle{
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-color: red;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .stick{
+            position: absolute;
+            display: grid;
+            grid-template-areas:
+            ". up ."
+            "left . right "
+            ". down .";
+            height: 160px;
+            width: 160px;
+            grid-gap: 10px;
+            top: 80%;
+            left: 80%;
+            
+        }
+        .stick button{
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blanchedalmond;
+            border: 1px solid grey;
+            border-radius: 10%;
+            color: rgb(66, 66, 66);
+        }
+        .btn-up{
+            grid-area: up;
+        }
+        .btn-right{
+            grid-area: right;
+        }
+        .btn-down{
+            grid-area: down;
+        }
+        .btn-left{
+            grid-area: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="stick">
+
+        <button class="btn-up">up</button>
+        <button class="btn-right">right</button>
+        <button class="btn-down">down  </button>
+        <button class="btn-left">left  </button>
+    </div>
+
+
+
+
+
+    <script>
+
+        document.addEventListener("mouseup",(event)=>{
+            a=event.clientY
+            document.querySelector(".circle").style.top=clientY+5+"px"
+        })
+    </script>
+</body>
+</html>
