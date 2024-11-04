@@ -1,52 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body{
             position: relative;
+            height: 100vh;
+            margin: 0;
         }
-        #circle{
-            height: 70px;
+        .circle{
             position: absolute;
-            width: 70px;
-            border-radius: 50%;
-            border: 2px solid rgb(241, 238, 4,);
+            height: 60px;
+            width: 60px;
+            background-color: red;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%,-50%);
-            animation-name: circle;
-            top: 100px;
-            left: 100px;
-            /* animation-timing-function: cubic-bezier(1, 0, 0, 0); */
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
-            transition-duration: .2s;
         }
-        @keyframes circle{
-            from{
-                box-shadow: 0px 0px 30px 20px rgba(241, 238, 4,.5);
-            }
-            to{
-                box-shadow: 0px 0px 0px 0px;
-            }
+        .stick{
+            position: absolute;
+            display: grid;
+            grid-template-areas:
+            ". up ."
+            "left . right "
+            ". down .";
+            height: 160px;
+            width: 160px;
+            grid-gap: 10px;
+            top: 80%;
+            left: 80%;
+            
+        }
+        .stick button{
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blanchedalmond;
+            border: 1px solid grey;
+            border-radius: 10%;
+            color: rgb(66, 66, 66);
+            font-size: 20px;
+        }
+        .btn-up{
+            grid-area: up;
+        }
+        .btn-right{
+            grid-area: right;
+        }
+        .btn-down{
+            grid-area: down;
+        }
+        .btn-left{
+            grid-area: left;
         }
     </style>
 </head>
 <body>
-    <div id="circle">
+    <div class="circle" id="circle"></div>
+    <div class="stick">
 
+        <button class="btn-up" id="btn-up" onclick="up()"><i class="bi bi-arrow-up"></i></button>
+        <button class="btn-right" id="btn-right" onclick="right()"><i class="bi bi-arrow-right"></i></button>
+        <button class="btn-down"  id="btn-down" onclick="down()"><i class="bi bi-arrow-down"></i></button>
+        <button class="btn-left"  id="btn-left" onclick="left()"><i class="bi bi-arrow-left"></i> </button>
     </div>
 
 
 
 
+
     <script>
-        document.addEventListener("mousemove",(event)=>{
-            document.getElementById("circle").style.top=event.clientY+"px"
-            document.getElementById("circle").style.left=event.clientX+"px"
-            // console.log(event.clientX);
-        })
+
+    function up(){
+            const circle=document.getElementById("circle")
+            let a=parseInt(window.getComputedStyle(circle).top)
+            circle.style.top=(a-15)+"px"
+            
+        }
+        function right(){
+            const circle=document.getElementById("circle")
+            let a=parseInt(window.getComputedStyle(circle).left)
+            circle.style.left=(a+15)+"px"
+            
+        }
+        function down(){
+            const circle=document.getElementById("circle")
+            let a=parseInt(window.getComputedStyle(circle).top)
+            circle.style.top=(a+15)+"px"
+            
+        }
+        function left(){
+            const circle=document.getElementById("circle")
+            let a=parseInt(window.getComputedStyle(circle).left)
+            circle.style.left=(a-15)+"px"
+            
+        }
     </script>
 </body>
 </html>
