@@ -11,6 +11,10 @@
             position: relative;
             height: 100vh;
             margin: 0;
+            background-image: url("/360_F_318489561_qpVjxV7GEF4btKaiD4OWe78vX737Jnzz.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .circle{
             position: absolute;
@@ -19,7 +23,14 @@
             background-color: red;
             top: 50%;
             left: 50%;
+            border-radius: 50%;
             transform: translate(-50%,-50%);
+        }
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
         }
         .stick{
             position: absolute;
@@ -30,13 +41,14 @@
             ". down .";
             height: 160px;
             width: 160px;
+            transform: translate(-50%,-50%);
             grid-gap: 10px;
             top: 80%;
-            left: 80%;
+            left: 85%;
             
         }
         .stick button{
-            height: 50px;
+            height: 45px;
             width: 50px;
             display: flex;
             justify-content: center;
@@ -62,7 +74,7 @@
     </style>
 </head>
 <body>
-    <div class="circle" id="circle"></div>
+    <div class="circle" id="circle"><img src="/image.png" alt=""></div>
     <div class="stick">
 
         <button class="btn-up" id="btn-up" onclick="up()"><i class="bi bi-arrow-up"></i></button>
