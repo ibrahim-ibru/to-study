@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        // class animal{
+        //     color="white"
+        //     teethSharp(){
+        //         console.log("sharp teeth");
+        //     }
+
+        //     aggressive(){
+        //         console.log("agressive");
+        //     }
+
+        //     plant(){
+        //         console.log("vegitarien");
+        //     }
+        // }
+
+        // lion= new animal
+        // lion.aggressive()
+        // lion.teethSharp()
+        // console.log(lion.color+" Lion");
+        // deer=new animal
+        // deer.plant()
+        // console.log(deer.color+" deer");
+
+        // _________________________________________________________________________________________________________
+        // ###########################################################################################################333
+        // ***************************************************************************************************************
+            // class wild{
+            //     name;
+            //     skill;
+
+            //     constructor(name,skill){
+            //         this.name=name
+            //         this.skill=skill
+            //     }
+                
+            //     proprties(){
+            //         console.log(this.name+" : "+this.skill);
+                    
+            //     }
+            // }
+
+            // bird=new wild("pegion","Fly")
+            // bird.proprties()
+            // animal=new wild("lion","run")
+            // animal.proprties()
+            // fish=new wild("shark","swim")
+            // fish.proprties()
+            
+        // _________________________________________________________________________________________________________
+        // ###########################################################################################################333
+        // ***************************************************************************************************************
+
+                class Person{
+            
+                    constructor(fname,lname,age){
+
+                        this.flnm=fname+lname
+                        this.age=age
+                        
+
+                    }
+
+                    printDetails(){
+                        if(this.age>=18){
+                            var mtr="adult"
+                        }
+                        console.log(`Full name of the candidate : ${this.flnm}\nage : ${this.age}\n maturity : ${mtr}`);
+                    }
+                }
+
+
+                candidate1=new Person("mohammed"," Ibrahim",22)
+                candidate1.printDetails()
+                candidate1=new Person("hi"," shanu",21)
+                candidate1.printDetails()
+
+                // _________________________________________________________________________________________________________
+        // ###########################################################################################################333
+        // ***************************************************************************************************************
+
+                console.log("\n\n\n\nBOOKS\n\n\n\n\n");
+        class Book{
+            constructor(title,auther,year){
+                this.title=title
+                this.auther=auther
+                this.year=year
+            }
+
+            getSummary(){
+                console.log(`the ${this.title} was a good book written by ${this.auther}. It was published by new comics at ${this.year} `);
+            }
+        }
+
+        book1=new Book("GOAT_LIFE","BENYAMIN",2022)
+        book1.getSummary()
+        book2=new Book("COMICS","JENNIFER",2023)
+        book2.getSummary()
+
+
+    </script>
+</body>
+</html>
