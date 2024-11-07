@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        // class Button{
+        //     constructor(name){
+        //         this.button=document.createElement("button")
+        //         this.button.innerHTML=name
+        //         document.body.appendChild(this.button)
+        //     }
+        //     setWidth(width){
+        //         this.button.style.width=width+"px"
+
+        //     }
+        //     setHeight(height){
+        //         this.button.style.height=height+"px"
+        //     }
+        // }
+
+
+        // btn1=new Button("clickme")
+        // btn1.setHeight(50)
+        // btn1.setWidth(100)
+
+
+
+        // class Button{
+        //     constructor(name){
+        //         this.button=document.createElement("button")
+        //         this.button.innerHTML=name
+        //         document.body.appendChild(this.button)
+        //     }
+        //     set width(width){
+        //         this.button.style.width=width+"px"
+
+        //     }
+        //     set height(height){
+        //         this.button.style.height=height+"px"
+        //     }
+        // }
+
+
+        // btn1=new Button("clickme")
+        // btn1.height=80
+        // btn1.width=100
+        
+
+        class Button{
+            constructor(name){
+                this.button=document.createElement("button")
+                this.button.innerHTML=name
+                document.body.appendChild(this.button)
+            }
+
+            set width(width){
+                this.button.style.width=width+"px"
+            }
+
+            set height(height){
+                this.button.style.height=height+"px"
+            }
+
+            get width(){
+                return parseInt(this.button.style.width)
+            }
+
+            get height(){
+                return this.button.style.height
+            }
+        }
+
+        btn1= new Button("clickHere")
+        btn1.width=100
+        btn1.height=70
+
+
+        console.log(btn1.width,btn1.height);
+
+
+
+
+    </script>
+
+</body>
+</html>
