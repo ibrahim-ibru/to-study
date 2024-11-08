@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="stylesheet" href="/eg.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .container img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .content{
+            width: 30%;
+            height: 30%;
+            position: absolute;
+            background-color: rgba(27, 27, 27, 0.2);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: justify;
+            padding: 30px;
+            border-radius: 30px;
+        }
+        .zind{
+            position: relative;
+        }
+        .div1{
+            background-color: brown;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        .div2{
+            background-color: rgb(78, 22, 219);
+            height: 200px;
+            width: 200px;
+            top: 50px;
+            left: 50px;
+            position: absolute;
+            z-index: 2;
+        }
+        .div3{
+            background-color: rgb(38, 32, 32);
+            height: 200px;
+            width: 200px;
+            top: 100px;
+            left: 100px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .main{
+            height: 60vh;
+            width: 100%;
+            background-image: url(/3b15c6fcfb598593b2d84d0068e2160d.jpg);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            background: linear-gradient(to right,black,white);
+        }
+        .main img{
+            object-fit: cover;
+            width: 100%;
+        }
+        .card{
+            height: 80%;
+            width: 17%;
+            background-image: url(/3b15c6fcfb598593b2d84d0068e2160d.jpg);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 8%;
+        }
+        .book-container {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.book-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Light shadow color */
+    z-index: 0; /* Place behind content */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.book-content {
+    position: relative;
+    background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0); /* Gradient background */
+    background-image: url('path/to/your/background-image.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-blend-mode: multiply; /* Blend gradient with image */
+    padding: 20px;
+    color: #333; /* Text color */
+    border-radius: 10px;
+    z-index: 1; /* Place above shadow */
+}
+
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <img src="https://www.allaboutbirds.org/news/wp-content/uploads/2023/12/Spotted-Dove_Ian-Hearn_173295601-scaled.jpg" alt="">
+    </div>
+    <div class="content">
+        <h1>BIRD</h1><br>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et quibusdam, sed excepturi eos atque explicabo autem fugit repellendus sapiente ipsam saepe! Eaque quae ducimus reprehenderit commodi officia adipisci nemo consectetur.</p>
+    </div>
+     <div class="zind">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        
+    </div>
+    <div class="bgimg">
+        <div class="cont">
+            <h1>HEY TOM</h1>
+        </div>
+    </div>  -->
+    <!-- <div class="product">
+        <div class="card1">card1</div>
+        <div class="card2">card2</div>
+        <div class="card3">card3</div>
+        <div class="card4">card4</div>
+        <div class="card5">card5</div>
+    </div>  -->
+    <!-- <div class="parent">
+        <div class="p2">
+
+        </div>
+        <div class="p3">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+    </div> -->
+
+    <div class="main">
+         <!-- <img src="/3b15c6fcfb598593b2d84d0068e2160d.jpg" alt=""> --> -->
+         <div class="card">
+
+        </div>
+    </div> 
+    <!-- <div class="book-container">
+        <div class="book-content">
+            <h2>Your Book Title</h2>
+            <p>Some description or content goes here.</p>
+        </div>
+    </div> -->
+    
+</body>
+</html>

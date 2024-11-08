@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+.bspm{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardm1{
+    background-color: red;
+}
+
+.cardimg{
+    background-color: blue;
+}
+
+.cardtext{
+    background-color: brown;
+}
+
+.cardbutton{
+    background-color: aliceblue;
+}
+
+h1{
+    display: in;
+}
