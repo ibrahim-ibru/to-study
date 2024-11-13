@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+
+        function fetchData(){
+
+            return new Promise((res,rej)=>{
+                if (false) {
+                    res("true team")
+                } else {
+                    rej("fasle team")
+                }
+            })
+        }
+        fetchData().then((data)=>{
+            console.log(data);}).catch((error)=>{console.log(error);})
+    </script>
+</body>
+</html>
