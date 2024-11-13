@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // exception : this programe is line by line execution so if there is an error they will terminatre the whole programe at that point so we cannot run the full programe this situartiom is called exeption
+        // exeption handling : try-catch is an exeption handling mechanism it helps us to run the rest of the programe and execute the full programe by using it . in the below programe there is n error that b=$ so tghe programe will terminate from the part that a/b there we use try-catch  so this programe will never terminate . the part that error will occur will put inside the try and that the part tghat we want to connect or commmunicate with user that some error was occured is catch part if the error occures and there is  achance to terminate programe the try-catch will work  . if there is an error the programe inside the catch will execute.
+        console.log("start");
+
+        try {
+            a=5
+            b=$
+            console.log(a/b);
+        } catch (error) {
+            console.log("error handled");
+        }
+
+
+
+        console.log("end");
+    </script>
+</body>
+</html>
