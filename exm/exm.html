@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="todo" onchange="add()" placeholder="enter the todo">
+    <ul id="task">
+    </ul>
+
+
+
+
+
+
+    <script>
+        const todos=[]
+
+        function add(){
+            let data=document.getElementById("todo").value
+            todos.push(data)
+            document.getElementById("todo").value=""
+            document.getElementById("todo").focus()
+            getTask()
+        }
+        
+
+        function getTask(){
+            let str=``
+            for(i=0;i<todos.length;i++){
+                str+=` <li><input type="text" class="inp" value="${todos[i]}"><button onclick="saveTask(${i})">save</button><button onclick="deleteTask(${i})">delete</button>\n<button onclick="editTask(${i})">Edit</button></li> `
+            }
+            document.getElementById("task").innerHTML=str
+        }
+
+        function deleteTask(index){
+            todos.splice(index,1)
+            getTask()
+        }
+
+        function editTask(index){
+            document.getElementsByClassName("inp")[index].focus()
+          
+            // getTask()
+        }
+        function saveTask(index){
+           let x=document.getElementsByClassName("inp")[index].value
+            todos[index]=x
+            getTask()
+        }
+        getTask()
+    </script>
+</body>
+</html>
