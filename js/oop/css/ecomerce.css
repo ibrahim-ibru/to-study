@@ -1,64 +1,205 @@
 *{
     margin: 0;
-    background-color: antiquewhite;
+    background-color: rgb(46, 46, 45);
 }
 
 .nav{
-    background-color: rgb(252, 217, 165);
-    height: 5rem;
+    background-color: rgba(28, 28, 28, 0.989);
+    height: 4rem;
     width: 100%;
     display: flex;
+    color:rgb(252, 217, 165) ;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid black;
 }
 
-.left{
+.icon,.mid,.right{
     display: flex;
-    background-color: rgb(252, 217, 165);
+    background-color: rgba(28, 28, 28, 0.989);
 
 }
-.left div{
-    background-color: rgb(252, 217, 165);
-    margin-left: 4rem;
-}
-
-.right{
-    background-color: rgb(252, 217, 165);
-}
-.right input{
+.mid div{
+    background-color: rgba(28, 28, 28, 0.989);
     margin-right: 4rem;
+    font-size: 14px;
+}
+
+.icon div{
+    background-color: rgba(28, 28, 28, 0.989);
+    font-size: 25px;
+}
+.icon div i{
+    background-color: rgba(28, 28, 28, 0.989);
+    margin-right: 2rem;
+
+}
+
+.right input{
+    margin-left: 4rem;
+    background-color:rgb(252, 217, 165) ;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 20rem;
+    border: 1px solid ;
+    border-radius: 5px;
+}
+
+.mid div:hover{
+    scale: 1.2;
 }
 .main-body {
     text-align: center;
+    color:rgb(252, 217, 165) ;
 }
 
 .products{
     /* background-color: red; */
     margin: auto;
-    height: 19rem;
+    height: 23rem;
     width: 80%;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .product-card{
-    /* background-color: aqua; */
+    /* background-color: rgb(252, 217, 165); */
     height: 100%;
     width: 14rem;
     border-radius: 20px;
+    margin-top: 5rem;
     box-shadow: 3px 0px 10px 5px rgb(78, 78, 78);
+}
+
+.product-card:hover{
+    scale: 1.05;
 }
 .product-img{
     /* background-color: green; */
-    height: 60%;
+    height: 56%;
     width: 95%;
-    margin: auto;
+    border: 1px solid rgb(252, 217, 165);
+    margin: 10px 5px 0px;
     border-radius: 20px;
 }
 
+.product-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
 .product-data{
     /* background-color: yellow; */
-    height: 38%;
+    height: 40%;
+    /* background-color: rgb(252, 217, 165); */
     width: 85%;
     align-content: center;
     margin: auto;
     text-align: start;
+}
+
+.product-data p{
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.product-data button{
+    border-radius:0 5px;
+    margin-top:10px ;
+    border-top: 1px solid rgb(252, 217, 165);
+    border-right: 1px solid rgb(252, 217, 165);
+    color: rgb(252, 217, 165); 
+}
+
+.product-data button:hover{
+    scale: 1.1;
+    background-color:rgb(252, 217, 165) ;
+    color:rgb(46, 46, 45) ;
+}
+
+.main{
+    height: 70vh;
+    width: 95%;
+    padding: 20px;
+    display: flex;
+}
+
+.sub-main1{
+    height: 100%;
+    width: 40%;
+}
+.img-sub-main{
+    height: 90%;
+    width: 100%;
+    display: flex;
+}
+
+.img-list{
+    height: 100%;
+    width: 20%;
+}
+.img-list div{
+    margin: 2px 0;
+    height: 70px;
+    width: 80%;
+}
+
+.main-img{
+    width: 80%;
+    height: 100%;
+}
+
+.buttons{
+    padding-left: 140px;
+}
+.buttons button{
+    padding: 15px 50px;
+    background-color: orange;
+    border: 0.5px solid black;
+    margin-top: 10px;
+    color: aliceblue;
+    font-weight: 700;
+}
+.sub-main2{
+    width: 58%;
+    height: 97%;
+    margin-left: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+}
+
+.rating span{
+    background-color: rgb(3, 159, 3);
+    color: aliceblue;
+    padding: 2px 5px;
+    text-align: center;
+    border-radius:5px;
+    line-height: 25px;
+}
+
+.rating{
+    color: grey;
+    font-size: 14px;
+}
+
+.flipassured{
+    height: 20px;
+    width: 75px;
+    display: inline-block;
+    padding: 0 0 0 20px;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.exchange div{
+    height: 40px;
+    width: 20rem;
+    display: flex;
+    text-align: center;
+    align-content: center;
 }

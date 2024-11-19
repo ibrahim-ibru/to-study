@@ -1,0 +1,91 @@
+.main{
+    background-color: red;
+    height: 70vh;
+    width: 95%;
+    padding: 20px;
+    display: flex;
+}
+
+.sub-main1{
+    background-color: aqua;
+    height: 100%;
+    width: 40%;
+}
+.img-sub-main{
+    background-color: green;
+    height: 90%;
+    width: 100%;
+    display: flex;
+}
+
+.img-list{
+    background-color: goldenrod;
+    height: 100%;
+    width: 20%;
+}
+.img-list div{
+    margin: 2px 0;
+    height: 70px;
+    width: 80%;
+    background-color: brown;
+}
+
+.main-img{
+    width: 80%;
+    height: 100%;
+    background-color: beige;
+}
+
+.buttons{
+    padding-left: 140px;
+}
+.buttons button{
+    padding: 15px 50px;
+    background-color: orange;
+    border: 0.5px solid black;
+    margin-top: 10px;
+    color: aliceblue;
+    font-weight: 700;
+}
+.sub-main2{
+    background-color: aliceblue;
+    width: 58%;
+    height: 97%;
+    margin-left: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+}
+
+.rating span{
+    background-color: rgb(3, 159, 3);
+    color: aliceblue;
+    padding: 2px 5px;
+    text-align: center;
+    border-radius:5px;
+    line-height: 25px;
+}
+
+.rating{
+    color: grey;
+    font-size: 14px;
+}
+
+.flipassured{
+    height: 20px;
+    width: 75px;
+    display: inline-block;
+    padding: 0 0 0 20px;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.exchange div{
+    height: 40px;
+    width: 20rem;
+    display: flex;
+    text-align: center;
+    align-content: center;
+}
