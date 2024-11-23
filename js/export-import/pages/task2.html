@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="checkDate" placeholder="dd-mm-yyyy"><span id="out"></span>
+
+    <script>
+
+        document.getElementById("checkDate").addEventListener("keyup",(event)=>{
+            res=checkDate(event.target.value)
+            document.getElementById("out").textContent=res?"valid":"not a valid date"
+            document.getElementById("out").style.color=res?"green":"red"
+
+
+        })
+
+        function checkDate(data){
+            const date=/^([0-2]\d||3[0-1])\.(0\d||1[0-2])-(\d{4})$/
+            return date.test(data)
+        }
+
+    </script>
+</body>
+</html>

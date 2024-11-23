@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="user"><span id="userout"></span><br>
+    <input type="email" name="" id="mail"><span id="mailout"></span><br>
+    <input type="text" name="" id="pass"><span id="passout"></span>
+
+    <script>
+
+        document.getElementById("user").addEventListener("keyup",(ev)=>{
+            res=checkUser(ev.target.value)
+            document.getElementById("userout").textContent=res?"valid":"not valid user"
+        })
+
+        function checkUser(data){
+
+            user=/.{3}./i
+            return user.test(data)
+        }
+
+        document.getElementById("mail").addEventListener("keyup",(event)=>{
+            res=checkMail(event.target.value)
+            document.getElementById("mailout").textContent=res?"valid":"invalid"
+        })
+
+        function checkMail(data){
+            mail=/.{8}@gmail\.com$/
+            return mail.test(data)
+        }
+        document.getElementById("pass").addEventListener("keyup",(event)=>{
+            res=checkPass(event.target.value)
+            document.getElementById("passout").textContent=res?"valid":"invalid"
+        })
+
+        function checkPass(data){
+            pass=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+            return pass.test(data)
+        }
+
+    </script>
+
+</body>
+</html>

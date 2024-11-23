@@ -13,8 +13,8 @@
 
         document.getElementById("phone").addEventListener("keyup",(e)=>{
             let res=checkPhone(e.target.value)
-            document.getElementById("out").textContent=res==true?"X":":)";
-            document.getElementById("out").style.color=res?"red":"green";
+            document.getElementById("out").textContent=res==true?":)":"X";
+            document.getElementById("out").style.color=res?"green":"red";
         })
 
         function checkPhone(data){

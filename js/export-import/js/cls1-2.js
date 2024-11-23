@@ -9,14 +9,8 @@ reg=/hello/
 reg1=/^hello/
 a=/rat/
 b=/^[r,c,b]at/
-c=/^[0-9]/
-d=/^[\d]/
-e=/h$/
-f=/^hat/
-g=/^hat/i
-h=/fishe?$/
-i=/fruit(es)?$/i
 console.log(reg.test(str));
+
 
 console.log(reg1.test(str));
 
@@ -28,28 +22,35 @@ console.log(b.test(str1));
 console.log(b.test(str2));
 console.log(b.test(str3));
 
+c=/^[0-9]/
 console.log(c.test(str1));
 console.log(c.test(str2));
 console.log(c.test(str3));
 
+d=/^[\d]/
 console.log(d.test(str1));
 console.log(d.test(str2));
 console.log(d.test(str3));
 
+e=/h$/
 console.log(e.test(str1));
 console.log(e.test(str2));
 console.log(e.test(str3));
 
+f=/^hat/
 console.log(f.test(str4));
 
+g=/^hat/i
 console.log(g.test(str4));
 
+h=/fishe?$/
 console.log(h.test(str1));
 console.log(e.test(str1));
+i=/fruit(es)?$/i
 
-console.log(e.test(str4));
-console.log(e.test(str2));
-console.log(e.test(str3));
+console.log(i.test(str4));
+console.log(i.test(str5));
+console.log(i.test(str3));
 
 
 phone="9876543210"
