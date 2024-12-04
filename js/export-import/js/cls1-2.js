@@ -43,7 +43,7 @@ console.log(f.test(str4));
 g=/^hat/i
 console.log(g.test(str4));
 
-h=/fishe?$/
+h=/fishes?$/
 console.log(h.test(str1));
 console.log(e.test(str1));
 i=/fruit(es)?$/i
